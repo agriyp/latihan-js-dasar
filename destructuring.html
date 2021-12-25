@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //destroctuctoring di array
+        {
+            const person = ["Agri", "Yodi", "Prayoga", "Budi", "Nugra"];
+            const [first, middle, last, ...other] = person;
+            
+            console.info(first);
+            console.info(middle);
+            console.info(last);
+            console.info(other);
+        }
+
+
+        //destroctuctoring di obeject
+        {
+            const biodata = {
+                nama: "Agri",
+                alamat: {
+                    jalan: "CIceuri",
+                    RT: "01"
+                },
+                hobi: "Voli",
+                makanan: "Sangu"
+            };
+            
+            // destroctuctoring di obeject
+            const {nama, alamat, ...others} = biodata;
+            console.info(nama);
+            console.info(alamat);
+            console.info(others);
+        }
+        
+        
+        //destroctuctoring di nested obeject
+        {
+            const biodata = {
+                nama: "Agri",
+                alamat: {
+                    jalan: "CIceuri",
+                    RT: "01"
+                },
+                hobi: "Voli",
+                makanan: "Sangu"
+            };
+    
+            const {nama, alamat:{jalan, RT}, ...others} = biodata;
+            console.info(nama);
+            console.info(jalan);
+            console.info(RT);
+            console.info(others);
+        }
+        
+
+
+        //destroctuctoring di function parameter objeck
+        {
+            function displayPerson({first, last}){
+                console.info(first);
+                console.info(last);
+            }
+
+            const person = {
+                first: "Agri",
+                last: "Yodi"
+            }
+
+            displayPerson(person);
+        }
+        
+        
+        //destroctuctoring di function parameter array
+        {
+            function sum([first, second]){
+                return first+second;
+            }
+            console.info(sum([1,5]));
+        }
+        
+        
+        
+        //destroctuctoring default value pd array
+        {
+            const names = ["Agri", "Yodi"];
+            const [firstName, middleName, lastName = "Prayoga" ] = names ;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+
+        }
+
+
+
+        //destroctuctoring default value pd object
+        {
+            const names = {
+                firstName: "Agri",
+                middleName: "Yodi"
+            };
+            
+            const {firstName, middleName, lastName = "Prayoga" } = names ;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            
+        }
+        
+        
+        
+        //destructoring merubah nama variabel dalam object
+        {
+            const names = {
+                firstName: "Agri",
+                middleName: "Yodi"
+            };
+            
+            const {
+                firstName: namaDepan, 
+                middleName: namaTengah,
+                lastName: namaBelakang = "Prayoga"
+            } = names;
+    
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+
+
+        </script>
+
+</body>
+</html>

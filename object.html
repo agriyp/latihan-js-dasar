@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cara input 1
+        const person = {
+            nama : "Agri Yodi Prayoga",
+            "middle name" : "Yodi",
+            umur : 22,
+            hobi : ["voli","lari"]
+        };
+        
+        // beberapa cara mengakses value objek
+        console.info(`Nama : ${person["nama"]} Umur : ${person.umur} Hobi : ${person.hobi[0]} dan ${person.hobi[1]}`);
+        
+        // cara input 2 dimulai pd objek kosong
+        // const person = {}
+        // person["nama"] = "Agri Yodi Prayoga";
+        // person["umur"] = "22";
+
+        console.table(person);
+    </script>
+</body>
+</html>

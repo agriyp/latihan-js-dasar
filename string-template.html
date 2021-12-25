@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // string template
+        const name = "Agri Yodi Prayoga";
+        const firstName = "Agri";
+        const middleName = "Yodi";
+        const lastName = "Prayoga";
+
+        const template = `Nama : ${firstName} ${middleName} ${lastName}`; 
+
+        console.info(template);
+
+        const nilai = 80;
+        const template2 = `Nama : ${firstName}, Lulus : ${nilai > 70}`;
+
+        console.info(template2);
+
+        // multiline string
+        const multiline = `Saya Agri,
+Ingin menjadi Pengusaha,
+Ini Latihan
+        `;
+
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+    </script>
+</body>
+</html>

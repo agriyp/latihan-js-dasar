@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function fungsiReturn(first, last){
+            let say = `Hai ${first} ${last}`;
+            return say;
+        }
+
+        const hasil = fungsiReturn("Agri", "Yodi");
+        document.writeln(hasil);
+        
+
+
+
+
+        function nilaiAkhir(nilai){
+            if (nilai > 80){
+                return "A";
+            } else if (nilai > 70) {
+                return "B";
+            } else {
+                return "C";
+            }
+        }
+        
+        nilai = nilaiAkhir(95);
+        document.writeln(`<p>${nilai}</p>`);
+        
+        
+        
+        
+
+        function cariNilai(array, searcValue){
+            for (const element of array) {
+                console.info(`Iterasi ${element}`);
+                if (element === searcValue) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        const array = [12,23,32,42,51];
+        hasil_cari = cariNilai(array, 31);
+        document.writeln(`<p>${hasil_cari}</p>`);
+        
+
+    </script>
+</body>
+</html>

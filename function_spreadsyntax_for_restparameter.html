@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...data){
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`Nilai ${name} adalah ${total}`);
+        }
+
+        //tanpa spread syntax
+        // sum("Agri", 8,7,8,9,8.5,9);
+
+        //dengan spread syntax
+        nilai = [8,9,8,7,9,8,7,8];
+        //cara 1
+        sum("Agri", ...[8,9,8,7,9,8,7,8]);
+        //cara 2
+        sum("Agri", ...nilai);
+    </script>
+</body>
+</html>
